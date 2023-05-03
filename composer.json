@@ -20,7 +20,7 @@
     },
     "scripts": {
         "cs": "phpcs ./src ./tests --standard=psr12",
-        "csf": "bin/phpcbf ./src ./tests --standard=psr12",
+        "csf": "phpcbf ./src ./tests --standard=psr12",
         "phpunit": "phpunit",
         "phpunit-coverage": "@php -d xdebug.mode=coverage ./vendor/bin/phpunit --coverage-html .phpunit.cache/cov-html"
     }
