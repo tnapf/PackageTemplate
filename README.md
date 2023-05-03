@@ -6,14 +6,12 @@ A template repository for making composer packages
 
 - [PHPUnit](https://phpunit.de/)
 - [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
-- [PHP-CS-Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
 - GitHub Actions
 - Composer Commands
   - `composer phpunit` - Run PHPUnit tests
   - `composer phpunit-coverage` - Run PHPUnit tests with coverage
   - `composer cs` - Run PHP CodeSniffer
   - `composer csfix` - Run PHP CodeSniffer and fix errors
-  - `composer php-cs-fixer` - Run PHP-CS-Fixer and standardize code
 
 ## How to set up?
 
