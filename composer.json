@@ -19,9 +19,9 @@
         "phpunit/phpunit": "^10.1"
     },
     "scripts": {
-        "cs": "./vendor/bin/phpcs ./src ./tests --standard=psr12",
-        "csf": "./vendor/bin/phpcbf ./src ./tests --standard=psr12",
-        "phpunit": "./vendor/bin/phpunit",
-        "phpunit-coverage": "php -d xdebug.mode=coverage ./vendor/bin/phpunit --coverage-html .phpunit.cache/cov-html"
+        "cs": "phpcs ./src ./tests --standard=psr12",
+        "csf": "bin/phpcbf ./src ./tests --standard=psr12",
+        "phpunit": "phpunit",
+        "phpunit-coverage": "@php -d xdebug.mode=coverage ./vendor/bin/phpunit --coverage-html .phpunit.cache/cov-html"
     }
 }
