@@ -1,6 +1,6 @@
 <?php
 
-namespace Tnapf\tests;
+namespace Tests\Tnapf\Package;
 
 use PHPUnit\Framework\TestCase;
 use Tnapf\Package\ExampleClass;
