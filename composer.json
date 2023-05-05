@@ -5,13 +5,18 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Tnapf\\Package\\": "src/"
+            "Tnapf\\Package\\": "src/",
+            "Tests\\Tnapf\\Package\\": "tests/"
         }
     },
     "authors": [
         {
             "name": "Robert Snedeker",
             "email": "rsnedeker20@gmail.com"
+        },
+        {
+            "name": "Mark Magyar",
+            "email": "hello@mmark.me"
         }
     ],
     "require-dev": {
@@ -23,5 +28,8 @@
         "csf": "phpcbf ./src ./tests --standard=psr12",
         "phpunit": "phpunit",
         "phpunit-coverage": "@php -d xdebug.mode=coverage ./vendor/bin/phpunit --coverage-html .phpunit.cache/cov-html"
+    },
+    "require": {
+        "php": ">=8.1"
     }
 }
