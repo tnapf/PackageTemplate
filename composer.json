@@ -49,7 +49,7 @@
     },
     "hooks": {
       "pre-commit": "composer fix:dry",
-      "pre-push": "composer phpunit"
+      "pre-push": "composer test"
     }
   },
   "scripts": {
