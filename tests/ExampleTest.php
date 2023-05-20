@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Tnapf\Package;
+namespace Tnapf\Packagetemplate\Test;
 
 use PHPUnit\Framework\TestCase;
-use Tnapf\Package\ExampleClass;
+use Tnapf\Packagetemplate\ExampleClass;
 
 class ExampleTest extends TestCase
 {

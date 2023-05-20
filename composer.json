@@ -1,35 +1,69 @@
 {
-    "name": "tnapf/package",
-    "description": "A package that does something",
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Tnapf\\Package\\": "src/",
-            "Tests\\Tnapf\\Package\\": "tests/"
-        }
+  "name": "tnapf/package",
+  "description": "A package that does something",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Robert Snedeker",
+      "email": "rsnedeker20@gmail.com"
     },
-    "authors": [
-        {
-            "name": "Robert Snedeker",
-            "email": "rsnedeker20@gmail.com"
-        },
-        {
-            "name": "Mark Magyar",
-            "email": "hello@mmark.me"
-        }
-    ],
-    "require-dev": {
-        "squizlabs/php_codesniffer": "^3.7",
-        "phpunit/phpunit": "^10.1"
-    },
-    "scripts": {
-        "cs": "phpcs ./src ./tests --standard=psr12",
-        "csf": "phpcbf ./src ./tests --standard=psr12",
-        "phpunit": "phpunit",
-        "phpunit-coverage": "@php -d xdebug.mode=coverage ./vendor/bin/phpunit --coverage-html .phpunit.cache/cov-html"
-    },
-    "require": {
-        "php": ">=8.1"
+    {
+      "name": "Mark Magyar",
+      "email": "hello@mmark.me"
     }
+  ],
+  "require": {
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "ergebnis/composer-normalize": "^2.31",
+    "fakerphp/faker": "^1.21",
+    "friendsofphp/php-cs-fixer": "^3.16",
+    "jetbrains/phpstorm-attributes": "^1.0",
+    "roave/security-advisories": "dev-latest",
+    "symfony/var-dumper": "^6.2",
+    "xheaven/composer-git-hooks": "^3.0",
+    "phpunit/phpunit": "^10.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tnapf\\Packagetemplate\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tnapf\\Packagetemplate\\Test\\": "tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "ergebnis/composer-normalize": true
+    },
+    "sort-packages": true
+  },
+  "extra": {
+    "composer-normalize": {
+      "indent-size": 2,
+      "indent-style": "space"
+    },
+    "hooks": {
+      "pre-commit": "composer fix:dry",
+      "pre-push": "composer phpunit"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": "cghooks add --ignore-lock",
+    "post-update-cmd": "cghooks update",
+    "post-autoload-dump": "composer normalize",
+    "post-create-project-cmd": [
+      "Tnapf\\Packagetemplate\\Setup::setup",
+      "@composer update",
+      "Tnapf\\Packagetemplate\\Setup::unlink"
+    ],
+    "fix": "php-cs-fixer fix --using-cache=no",
+    "fix:dry": "php-cs-fixer fix --using-cache=no --diff --dry-run",
+    "test": "phpunit",
+    "test:coverage": "@php -d xdebug.mode=coverage ./vendor/bin/phpunit --coverage-html .phpunit.cache/cov-html"
+  }
 }

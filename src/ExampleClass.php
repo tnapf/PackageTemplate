@@ -1,6 +1,6 @@
 <?php
 
-namespace Tnapf\Package;
+namespace Tnapf\Packagetemplate;
 
 class ExampleClass
 {
