@@ -58,8 +58,8 @@
     "post-autoload-dump": "composer normalize",
     "post-create-project-cmd": [
       "Tnapf\\Package\\Setup::setup",
-      "@composer update",
-      "Tnapf\\Package\\Setup::unlink"
+      "Tnapf\\Package\\Setup::unlink",
+      "@composer update"
     ],
     "fix": "php-cs-fixer fix --using-cache=no",
     "fix:dry": "php-cs-fixer fix --using-cache=no --diff --dry-run",
