@@ -27,7 +27,7 @@ A template repository for making composer packages
 ## Installation
 
 ```bash
-composer create-project tnapf/package-template <package>
+composer create-project tnapf/package <package>
 ```
 
 ## Setup GitHub Repository
