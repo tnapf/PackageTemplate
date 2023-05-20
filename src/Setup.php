@@ -1,6 +1,6 @@
 <?php
 
-namespace Tnapf\Packagetemplate;
+namespace Tnapf\Package;
 
 use JetBrains\PhpStorm\ArrayShape;
 

@@ -28,12 +28,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Tnapf\\Packagetemplate\\": "src/"
+      "Tnapf\\Package\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Tnapf\\Packagetemplate\\Test\\": "tests/"
+      "Tnapf\\Package\\Test\\": "tests/"
     }
   },
   "config": {
@@ -57,9 +57,9 @@
     "post-update-cmd": "cghooks update",
     "post-autoload-dump": "composer normalize",
     "post-create-project-cmd": [
-      "Tnapf\\Packagetemplate\\Setup::setup",
+      "Tnapf\\Package\\Setup::setup",
       "@composer update",
-      "Tnapf\\Packagetemplate\\Setup::unlink"
+      "Tnapf\\Package\\Setup::unlink"
     ],
     "fix": "php-cs-fixer fix --using-cache=no",
     "fix:dry": "php-cs-fixer fix --using-cache=no --diff --dry-run",
