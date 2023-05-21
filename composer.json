@@ -32,7 +32,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Tnapf\\Package\\Test\\": "tests/"
+      "Tnapf\\Package\\Tests\\": "tests/"
     }
   },
   "config": {
