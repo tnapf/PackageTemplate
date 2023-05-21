@@ -246,6 +246,8 @@ return $config->setRiskyAllowed(true)
         'visibility_required' => ['elements' => ['method', 'property']],
         // In array declaration, there MUST be a whitespace after each comma.
         'whitespace_after_comma_in_array' => true,
+        // Enabling PSR12 rules.
+        '@PSR12' => true,
     ])
     ->setFinder(PhpCsFixer\Finder::create()
         ->exclude([
